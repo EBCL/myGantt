@@ -1,0 +1,230 @@
+/*全局样式部分*/
+body{
+    font-family: "微软雅黑";
+    cursor: default;
+    -webkit-user-select: none;
+}
+
+/*gantt拖动测试样式*/
+.myDD{
+    width: 120px;
+    height: 20px;
+    border: solid 1px #333;
+    background: red;
+    position: absolute;
+    left: 490px;
+    top: 193px;
+    z-index: 4;
+}
+
+.myll{
+    width: 4px;
+height: 24px;
+background: #333333;
+position: absolute;
+
+    left: 489px;
+
+    top: 192px;
+cursor: e-resize;
+    z-index: 5;
+}
+
+.myoii{
+    width: 4px;
+height: 24px;
+background: #333333;
+position: absolute;
+
+    left: 609px;
+
+    top: 192px;
+cursor: e-resize;
+
+    z-index: 5;
+}
+
+.wrapBox{
+
+    width: 700px;
+    height: 700px;
+    border: solid 1px #333;
+}
+
+.gridlineBox{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.gridx{
+    border-bottom: solid 1px #ccc;
+height: 30px;
+width: 100%;
+
+    position: absolute;
+    z-index: 2;
+}
+
+.gridy{
+    border-right: solid 1px #ccc;
+
+    height: 100%;
+    position: absolute;
+    width: 22px;
+    z-index: 3;
+}
+
+/*日历控件测试样式*/
+
+.candlebox{
+
+    height: 36px;
+    
+    
+
+    width: 100%;
+
+    position: relative;
+
+}
+
+.candleTitle{
+    
+    width: 100%;
+}
+
+.oneMonthBox{
+
+    position: absolute;
+    
+
+    width: 100%;
+
+}
+
+.thisMonth{
+
+    height: 20px;
+    font-size: 13px;
+    border-bottom: solid 1px #999;
+    line-height: 20px;
+    
+
+    border-right: solid 1px #fff;
+
+    font-weight: bold;
+
+    text-indent: 8px;
+
+    color: #fff;
+
+}
+
+.thisMonthDate{
+    width: auto;
+
+}
+
+.dateList{
+    float: left;
+    
+    border-right: solid 1px #eee;
+    font-size: 12px;
+    height: 16px;
+    position: absolute;
+    width: 22px;
+    text-align: center;
+    color: #666;
+}
+
+.widthpp{
+    width: 30490px;
+    
+    height: 1px;
+}
+
+
+/*页面框架部分样式*/
+#gantt_wrap{
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+}
+#gantt_header{
+    width: 100%;
+    height: 36px;
+    background: #ccc;
+    overflow: hidden;
+    position: relative;
+}
+#gantt_chart{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+#task_list{
+    width: 200px;
+    border-right: solid 1px #ccc;
+    height: 1000px;
+    position: fixed;
+    background: #eee;
+    top: 8px;
+    z-index: 9;
+}
+
+#project_name{
+    font-size: 14px;
+    height: 29px;
+    border-bottom: solid 1px #ccc;
+    line-height: 29px;
+    padding-left: 10px;
+}
+#project_target{}
+.category_title{
+    padding-left: 10px;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+}
+.group_target{}
+.task_title{
+    font-size: 12px;
+    padding-left: 20px;
+    height: 20px;
+    line-height: 20px;
+}
+
+/*横向滚动条盒子样式*/
+#scroll_container{
+    width: 1047px;
+    height: 15px;
+    background: #ccc;
+    position: fixed;
+    bottom: 0;
+    left: 210px;
+    cursor: default;
+    z-index: 9;
+}
+#scroll_bg{}
+#scroll_bar{
+    height: 11px;
+    width: 122px;
+    background: #666;
+    margin-top: 2px;
+    margin-left: 12px;
+    position: relative;
+    cursor: default;
+}
+#scroll_left{
+    width: 12px;
+    height: 12px;
+    background: #333;
+    position: relative;
+    margin-top: -12px;
+}
+#scroll_right{
+    width: 12px;  height: 12px;  background: #333;  position: relative;  margin-top: -12px;
+    margin-left: 1033px;
+}
