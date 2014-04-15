@@ -3,6 +3,7 @@ body{
     font-family: "微软雅黑";
     cursor: default;
     -webkit-user-select: none;
+    overflow: hidden;
 }
 
 /*gantt拖动测试样式*/
@@ -53,19 +54,20 @@ cursor: e-resize;
 
 .gridlineBox{
     position: absolute;
-    width: 100%;
+    width: auto;
     height: 100%;
+    margin-top: 0px;
 }
 
 .gridx{
-    border-bottom: solid 1px #ccc;
-height: 30px;
-width: 100%;
-
-    position: absolute;
-    z-index: 2;
+    height: 24px;
+    width: 1204px;
+    position: relative;
+    z-index: 4;
+    opacity: 1;
+    left: 0;
+    top: 0;
 }
-
 .gridy{
     border-right: solid 1px #ccc;
 
@@ -148,7 +150,7 @@ width: 100%;
 /*页面框架部分样式*/
 #gantt_wrap{
     width: 100%;
-    height: 500px;
+    height: 890px;
     overflow: hidden;
 }
 #gantt_header{
@@ -166,39 +168,63 @@ width: 100%;
 }
 #task_list{
     width: 200px;
-    border-right: solid 1px #ccc;
+    border-right: solid 1px #E2E1E1;
     height: 1000px;
-    position: fixed;
+    position: relative;
     background: #eee;
-    top: 8px;
-    z-index: 9;
+    z-index: 4;
+    float: left;
+    overflow: hidden;
 }
 
-#project_name{
+.project_name{
     font-size: 14px;
-    height: 29px;
+    height: 35px;
     border-bottom: solid 1px #ccc;
     line-height: 29px;
     padding-left: 10px;
 }
-#project_target{}
+#project_target{
+    position: relative;
+    z-index: 97;
+    width: 100%;
+}
 .category_title{
     padding-left: 10px;
     font-size: 14px;
     height: 24px;
     line-height: 24px;
+    position: relative;
+    z-index: 9;
 }
 .group_target{}
 .task_title{
     font-size: 12px;
     padding-left: 20px;
-    height: 20px;
+    height: 24px;
     line-height: 20px;
 }
 
+#task_chart{
+    position: relative;
+    height: 100%;
+    width: auto;
+    overflow: hidden;
+}
+
+.candlebgBox{
+    width: 190px;
+    
+    background: #ccc;
+    height: 36px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-right: solid 1px #fff;
+}
 /*横向滚动条盒子样式*/
 #scroll_container{
-    width: 1047px;
+    width: 1064px;
     height: 15px;
     background: #ccc;
     position: fixed;
@@ -226,5 +252,80 @@ width: 100%;
 }
 #scroll_right{
     width: 12px;  height: 12px;  background: #333;  position: relative;  margin-top: -12px;
-    margin-left: 1033px;
+    margin-left: 1051px;
+}
+
+
+
+
+.bgGridBox{}
+
+.collapse_arrow{
+     background: url("img/collapse_arrow_right_dark.png");
+    width: 10px;
+    
+     height: 10px;
+    float: left;
+    
+     margin-top: 8px;
+     background-repeat: no-repeat;
+}
+
+.titleText{
+    float: left;
+    margin-left: 4px;
+}
+
+.collapse_arrow[aractive="active"]{
+    background: url("img/collapse_arrow_down_dark.png");
+     
+    width: 10px;
+     height: 11px;
+     
+    margin-top: 9px;
+    background-repeat: no-repeat;
+}
+
+.active{
+    background: #E2E1E1;
+}
+
+.task_div{
+    width: 120px;
+    
+    height: 16px;
+    background: rgb(198, 219, 247);
+    position: absolute;
+    left: 391px;
+    border: solid 1px rgb(113, 154, 206);
+    border-radius: 4px;
+    margin-top: 3px;
+}
+
+.project_chart{
+    position: relative;
+    
+    width: 100%;
+    height: 100%;
+}
+
+.active .drawLeft{
+    left: 513px;
+
+    border-right: solid 1px #999;
+}
+
+.active .drawRight{
+    left: 577px;
+
+    border-left: solid 1px #999;
+}
+
+.active .drawLine{
+    width: 4px;
+    cursor: e-resize;
+    height: 12px;
+    position: absolute;
+    z-index: 9;
+    margin-top: 6px;
 }
